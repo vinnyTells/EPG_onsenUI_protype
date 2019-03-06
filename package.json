@@ -1,0 +1,16 @@
+{
+  "name": "com.epg.protype",
+  "version": "1.0.0",
+  "displayName": "EPG",
+  "cordova": {
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  },
+  "dependencies": {
+    "cordova-android": "~7.1.4",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-browser": "~5.0.4"
+  }
+}
