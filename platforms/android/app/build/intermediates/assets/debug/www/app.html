@@ -1,0 +1,102 @@
+<div id="appInterface" ng-init="passwordSize = 12">
+    
+  <!--h1>EPG</h1-->
+  
+  <h4>Password size:&nbsp;{{passwordSize}}</h4>
+  
+  <ons-row width="90%" vertical-align="center">
+      <ons-col width="15%"  class="rangeLimit">
+        <!--ons-button><ons-icon icon="fa-minus"></ons-icon></ons-button-->
+        <span class="rangeLimit">MIN</span>
+      </ons-col>
+      <ons-col width="70%">
+        <ons-range id="passwordSize" ng-model="passwordSize" min="4" max="20"></ons-range>
+      </ons-col>
+      <ons-col width="15%"  class="rangeLimit">
+        <!--ons-button><ons-icon icon="fa-plus"></ons-icon></ons-button-->
+        <span>MAX</span>
+      </ons-col>
+  </ons-row>
+  
+  <br/>
+  
+  <ons-input type="text" id="password" readonly placeholder="New Password"  modifier="underbar" size="30"></ons-input>
+  
+  <br/><br/>
+  
+  <ons-row>
+    <ons-col>
+      <ons-button class="button--outline" id="gen" onclick="genPassword()">Generate</ons-button>
+    </ons-col>
+    
+    <ons-col>
+      <ons-button class="button--outline" id="cpy" onclick="copyPswd()" >Copy</ons-button>
+    </ons-col>
+  </ons-row>
+   
+  <ons-toast id="myToast" animation="fall" >
+    <div class="toast">
+      <ons-icon  class="ons-icon my-hint-icon" fixed-width="true"></ons-icon>&nbsp;<span id="advise"></span>
+      <!--button onclick="myToast.hide()">ok</button-->
+    </div>
+  </ons-toast>
+  <!--ons-input type="text" id="advise" modifier="" readonly value="Generate first and copy later." size="45"></ons-input-->
+  
+  <br/><br/> 
+  
+  <ons-list id="">
+    <ons-list-header><ons-icon class="ons-icon my-tool-icon" fixed-width="true"></ons-icon> More settings </ons-list-header>
+    <ons-list-item expandable id="expand" >
+      
+      <div class="center">
+        <span class="list-item__title" id="showHide">Show</span>
+        <!--span class="list-item__subtitle">/span-->
+      </div>
+      <!--/div-->
+      <div class="expandable-content">
+        
+        <ons-list id="" modifier="">
+
+            <ons-list-header>Values types</ons-list-header>  
+
+              <ons-list-item tappable modifier="longdivider">
+                
+                <label class="left">
+                  <ons-checkbox input-id="check-1" checked></ons-checkbox>
+                </label>
+                <label for="check-1" class="right">ABC..</label>
+                <label for="check-1" class="center list-item__subtitle">Uppercase alphabetic</label>
+              </ons-list-item>
+
+              <ons-list-item tappable  modifier="longdivider">
+                <label class="left">
+                  <ons-checkbox input-id="check-2" checked></ons-checkbox>
+                </label>
+                <label for="check-2" class="right">abc...</label>
+                <label for="check-2" class="center list-item__subtitle">Lowercase alphabetic</label>
+              </ons-list-item>
+
+              <ons-list-item tappable modifier="longdivider">
+                <label class="left">
+                  <ons-checkbox input-id="check-3" checked></ons-checkbox>
+                </label>
+                <label for="check-3" class="right">123...</label>
+                <label for="check-3" class="center list-item__subtitle">Numeric</label>
+              </ons-list-item>
+
+              <ons-list-item tappable modifier="longdivider">
+                <label class="left">
+                  <ons-checkbox input-id="check-4" checked></ons-checkbox>
+                </label>
+                <label for="check-4" class="right">@#$...</label>
+                <label for="check-4" class="center list-item__subtitle">Especial characters</label>
+
+              </ons-list-item>
+
+           </ons-list>   
+      </div>
+    
+    </ons-list-item>
+  </ons-list>
+    
+</div>
