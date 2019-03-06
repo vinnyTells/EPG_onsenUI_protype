@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+      <meta charset="utf-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="msapplication-tap-highlight" content="no" />
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+      <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+      <!--meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" /-->
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+        
+        <!--link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"-->
+        
+        <!--script src="lib/angularjs-1.7.5/angular.min.js"></script-->
+        <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script-->        
+        <!--script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+        <script src="https://unpkg.com/angularjs-onsenui@1.0.1/dist/angularjs-onsenui.min.js"></script-->
+      
+        <link rel="stylesheet" href="lib/onsen/css/onsenui-core.css">
+        <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.min.css">
+        <link rel="stylesheet" href="myCSS/index.css">       
+        
+        <script type="text/javascript" src="cordova.js"></script>      
+        <script type="text/javascript" src="lib/angularjs-1.7.5/angular.min.js"></script>      
+        <script type="text/javascript" src="lib/onsen/js/onsenui.min.js"></script>
+        <script type="text/javascript" src="lib/onsen/js/angularjs-onsenui.min.js"></script>
+        <script type="text/javascript" src="lib/jquery-3.3.1/jquery.min.js"></script> 
+      
+        
+        <!--script type="text/javascript" src="clipboard.js"></script--> 
+      
+        
+        
+        <title>Easy Password Generator</title>
+    </head>
+    <body ng-app="myApp">
+      
+      <div id="preloader">
+        <img id="introLogo" src="img/epg_anmt_logo.gif">
+        <div id="introText"><h1>easy password generator</h1></div>
+      </div>
+      
+      <ons-page id="" class="">
+        
+        <ons-toolbar>
+          
+          <div class="left"><ons-icon class="ons-icon my-logo-icon" fixed-width="true"></ons-icon></div>
+          <div class="center">EPG</div>
+          <div class="right">
+            <ons-toolbar-button onclick="showTutorial()">?</ons-toolbar-button>
+          </div>         
+        </ons-toolbar>        
+        
+        <main-App></main-App>        
+         
+      </ons-page>
+      <help-Tutorial></help-Tutorial>
+      <help-Pages></help-Pages>                                                  
+      <script type="text/javascript" src="myJS/index.js"></script>
+      <script type="text/javascript">
+        app.initialize();        
+      </script>
+    </body>
+</html>

@@ -1,0 +1,207 @@
+/**/@import url("onsen-css-components.min.css");/**/
+/**/@import url("theme.css");/**/
+
+
+#preloader {
+  position: fixed;
+  /*left: 0;
+  top: 0;*/
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background-color: orangered /*url('../img/epg_anmt_logo.gif')*/;    
+    
+}
+
+#introText {  
+  text-align: center;
+  text-transform: capitalize;
+  margin: auto;
+  color: blanchedalmond;
+  font-family: monospace;
+}
+
+#introLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-tool-icon { 
+
+  background: url(../img/plane_tool_icon.svg) center/contain no-repeat;  
+  font-size: 18px;
+  height: 18px;
+  margin: 8px auto auto auto; 
+  
+}
+
+.my-logo-icon { 
+
+  background: url(../img/plane_epg_logo.svg) center/contain no-repeat;  
+  font-size: 35px;
+  height: 35px;
+  margin: 5px auto;
+ 
+}
+
+.my-hint-icon { 
+
+  background: url(../img/plane_hint_icon.svg) center/contain no-repeat;  
+  font-size: 18px;
+  height: 18px;
+  /*margin: 5px auto;*/
+  vertical-align:  text-bottom;
+ 
+}
+
+.page__background {
+  background-color:azure;
+}
+
+#passwordSize{
+  width: 95%;
+}
+
+.rangeLimit {
+  text-align: center;
+  line-height: 31px;
+}
+
+.commonList {
+  text-align: left;
+  margin: auto;
+}
+
+/*vertical*/
+@media only screen and (orientation:portrait/*max-width: 450px*/) {
+#appInterface {
+  width: 90%;
+  margin: auto;    
+  padding: 10px;
+  text-align: center;
+  /*color: orangered;*/
+  /*font-size:30px*/
+  }
+  /**/
+  
+  #introText { 
+     /*width: 90%;*/
+  }
+  
+  #introLogo {
+    width: 100%;
+    height: 30%;
+    margin-top: 30%;
+  }
+  /**/
+  #fence, #castle {
+    height: 80%;
+    width: 80%;
+  }
+  
+  #vs {
+    height: 20%;
+    width: 20%;
+  }
+  
+  #logo_help, #help-pswd {
+    height: 30%;
+    width: 50%;
+  }
+  
+  
+  /**/
+}
+
+/*horizontal*/
+@media only screen and (orientation:landscape/*min-width: 451px*/) {
+#appInterface {
+  width: 70%;
+  margin: auto;    
+  padding: 15px;
+  text-align: center;
+  /*color: orangered;*/
+  font-size:20px
+  }
+  /**/
+  
+  #introText { 
+     /*width: 100%;*/
+  }
+  
+  #introLogo {
+    width: 70%;   
+  }
+  /**/
+  #castle {
+    height: 70%;
+    width: 70%;
+  }
+  
+  #fence {
+    height: 80%;
+    width: 80%;
+  } 
+  
+  #vs {
+    height: 20%;
+    width: 20%;
+  }
+  
+  #logo_help, #help-pswd{
+    height: 50%;
+    width: 30%;
+  }
+  
+  /**/
+}
+
+/*
+ons-toolbar .center , .toolbar-button{
+  color: orangered;
+}
+*/
+
+.toast {
+  background-color: rgba(255,69,0,1);
+}
+
+.toast__button {
+  color: cornsilk;
+}
+
+
+.page__content h3{ 
+  text-align: center;
+  /*color: burlywood;*/
+}
+
+.page__content p{
+  padding: 25px;
+  text-align: justify;
+  text-indent: 30px;
+  /*color: white;*/
+}
+
+.modalPage .page__background{ background-color: azure; }
+
+/**/
+
+#fence, #castle , #vs{  margin-bottom: 25px; }
+
+/**
+
+.toolbar {
+  background-color: orange;
+}
+
+.toolbar__title {
+   color: white;
+}
+
+.page__content {
+  background-color: whitesmoke;
+}
+/**/
