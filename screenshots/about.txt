@@ -1,0 +1,1 @@
+This folder contain all screenshots from app running in a real android device.
